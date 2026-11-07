@@ -1,0 +1,24 @@
+rank,plugin_id,finding,family,severity,systems_affected,properties_affected,risk_contribution,cve_ids
+1,42873,SSL Medium Strength Cipher Suites Supported (SWEET32),weak_ciphers,High,6,4,168,CVE-2016-2183
+2,57608,SMB Signing not required,smb_signing,Medium,12,6,156,
+3,175373,"Microsoft Message Queuing RCE (CVE-2023-21554, QueueJumper)",msmq_missing_patches,Critical,3,2,150,CVE-2023-21554
+4,73756,Microsoft SQL Server Unsupported Version Detection (remote check),unsupported_outdated_software,Critical,3,2,150,
+5,900001,Remote Control Agent Public Key Buffer Over-read,remote_access_tools,High,5,3,150,
+6,160480,OpenSSL 1.0.2 < 1.0.2ze Vulnerability,unsupported_outdated_software,Critical,2,2,100,
+7,20007,SSL Version 2 and 3 Protocol Detection,legacy_tls_ssl,Critical,2,2,100,
+8,158973,OpenSSL 1.0.2 < 1.0.2zd Vulnerability,unsupported_outdated_software,High,3,2,90,
+9,35291,SSL Certificate Signed Using Weak Hashing Algorithm,weak_certificates,High,3,2,90,
+10,104743,TLS Version 1.0 Protocol Detection,legacy_tls_ssl,Medium,6,4,84,
+11,51192,SSL Certificate Cannot Be Trusted,weak_certificates,Medium,5,3,69,
+12,183391,Apache 2.4.x < 2.4.58 Multiple Vulnerabilities,unsupported_outdated_software,High,2,2,60,
+13,57582,SSL Self-Signed Certificate,weak_certificates,Medium,4,3,60,
+14,157288,TLS Version 1.1 Deprecated Protocol,legacy_tls_ssl,Medium,4,2,54,
+15,58453,Terminal Services Doesn't Use Network Level Authentication (NLA) Only,rdp_no_nla,Medium,4,3,54,
+16,153584,Apache < 2.4.49 Multiple Vulnerabilities,unsupported_outdated_software,Critical,1,1,50,
+17,10114,ICMP Timestamp Request Remote Date Disclosure,legacy_simple_services,Low,11,5,44,CVE-1999-0524
+18,45411,SSL Certificate with Wrong Hostname,weak_certificates,Medium,1,1,15,
+19,83875,SSL/TLS Diffie-Hellman Modulus <= 1024 Bits (Logjam),weak_ciphers,Low,2,2,10,
+20,78479,SSLv3 Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE),legacy_tls_ssl,Low,2,2,7,
+21,10061,Echo Service Detection,legacy_simple_services,Medium,1,1,6,
+22,10198,Quote of the Day (QOTD) Service Detection,legacy_simple_services,Medium,1,1,6,
+23,187315,SSH Terrapin Prefix Truncation Weakness (CVE-2023-48795),ssh_weakness,Medium,1,1,6,CVE-2023-48795

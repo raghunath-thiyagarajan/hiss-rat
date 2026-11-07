@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Real scan exports must never be committed. Only the synthetic sample and the dashboard are allowed.
+*.nessus
+*.html
+!sample_data/nessus_html/*.html
+!outputs/dashboard.html
+raw/
+real_data/
+private/
+_private/
+
+# Local files
+*.bak
+.env
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

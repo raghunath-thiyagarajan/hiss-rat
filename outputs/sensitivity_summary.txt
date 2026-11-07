@@ -1,0 +1,19 @@
+HISS-RAT sensitivity summary (weights and tiers are assumed; see config/assumptions.yaml)
+
+Base case top 5 systems: PROP-C-SQL-01, PROP-A-SQL-01, PROP-A-PMS-01, PROP-C-SQLBK-01, PROP-C-AD-01
+
+Ranking stability across 22 perturbations (control cases excluded)
+  Spearman rho against base: min 0.991, mean 0.999, max 1.000
+  Lowest rho: Critical +20% and others -20% (0.991)
+  Top 5 set unchanged in 20 of 22 cases; exact order unchanged in 20 of 22 cases
+  Rank 1 system unchanged in 22 of 22 cases
+  Cases that change the top 5 set:
+    - Critical weight plus 20% (overlap 4 of 5, rho 0.999)
+    - Critical +20% and others -20% (overlap 4 of 5, rho 0.991)
+  Control (uniform scaling of all severity weights) rho: 1.000, 1.000
+
+Downtime cost range, group total in INR (ADR minus and plus 20%, occupancy 55 to 75%; assumed)
+  S1 PMS and SQL ransomware         min 1,352,241 | base 1,997,626 | max 2,765,947
+  S2 Domain controller compromise   min 600,996 | base 887,835 | max 1,229,310
+  S3 Interface server failure       min 375,623 | base 554,896 | max 768,316
+  S4 In room entertainment outage   min 75,125 | base 110,978 | max 153,661

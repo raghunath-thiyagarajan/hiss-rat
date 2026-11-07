@@ -1,0 +1,7 @@
+property,property_label,systems_scanned,critical,high,medium,low,info,low_plus,total_risk_score,property_risk_index,mean_system_index,systems_critical_band,systems_high_band,worst_system
+PROP-A,PROP-A,4,4,6,12,5,18,27,571,75.6,31.4,1,1,PROP-A-SQL-01
+PROP-B,PROP-B,2,1,2,4,1,7,8,151,20.0,16.6,0,1,PROP-B-IFS-01
+PROP-C,PROP-C,4,5,9,15,6,20,35,755,100.0,41.5,1,2,PROP-C-SQL-01
+PROP-D,PROP-D,2,1,1,5,2,7,9,132,17.5,14.5,0,1,PROP-D-PMS-01
+PROP-E,PROP-E,2,0,1,2,0,9,3,60,7.9,6.6,0,0,PROP-E-AD-01
+PROP-F,PROP-F,2,0,0,1,1,4,2,10,1.3,1.1,0,0,PROP-F-ACC-01

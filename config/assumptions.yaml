@@ -1,0 +1,85 @@
+# HISS-RAT assumption register (A01 to A05). Every value below is an ASSUMED modelling input
+# chosen for a mid scale hotel group. None of it is measured. Validate with hotel
+# management before relying on any cost or tier.
+meta:
+  register: "A01 to A05 (assumed)"
+  currency: INR
+
+# A01 size classes and A02 average daily rate (INR)
+size_classes:
+  L: {rooms: 150, adr_inr: 5500}
+  M: {rooms: 100, adr_inr: 4500}
+  S: {rooms: 60, adr_inr: 3500}
+
+# Property list in report order. Labels only. size_class refers to size_classes (A01).
+properties:
+  PROP-A: {label: "PROP-A", short: "PROP-A", size_class: L}
+  PROP-B: {label: "PROP-B", short: "PROP-B", size_class: M}
+  PROP-C: {label: "PROP-C", short: "PROP-C", size_class: M}
+  PROP-D: {label: "PROP-D", short: "PROP-D", size_class: S}
+  PROP-E: {label: "PROP-E", short: "PROP-E", size_class: S}
+  PROP-F: {label: "PROP-F", short: "PROP-F", size_class: S}
+
+# A01 and A02 occupancy cases and revenue uplift
+occupancy: {low: 0.55, base: 0.65, high: 0.75}
+fb_uplift: 0.45          # food and beverage plus other revenue as a share of room revenue (A02)
+
+# A04 asset criticality tiers: weight and assumed recovery time objective (hours)
+tiers:
+  1: {weight: 5, rto_hours: 4,  label: "Tier 1 PMS, SQL, AD and interface"}
+  2: {weight: 3, rto_hours: 8,  label: "Tier 2 accounting, finance, front desk, F and B, guest services"}
+  3: {weight: 2, rto_hours: 24, label: "Tier 3 in room entertainment and guest facing servers"}
+  4: {weight: 1, rto_hours: 48, label: "Tier 4 other desktops"}
+achievable_recovery_hours_tier1: {min: 24, max: 72}   # assumed: no tested DR plan is evidenced
+
+# Tier by role key (A04). F and B manager is placed with F and B controls (assumed).
+role_tier:
+  pms: 1
+  sql: 1
+  sqlbackup: 1
+  ad: 1
+  interface: 1
+  accounting: 2
+  finance: 2
+  accounts: 2
+  frontdesk: 2
+  frontoffice: 2
+  fnb_controls: 2
+  fnb_manager: 2
+  guestsvc: 2
+  inroom: 3
+  inroom_gw: 3
+  hr: 4
+  itsystem: 4
+  backoffice: 4
+  desktop: 4
+  admin: 4
+
+# Technical severity weights (TS = 10C + 6H + 3M + 1L)
+severity_weights: {Critical: 10, High: 6, Medium: 3, Low: 1, Info: 0}
+
+# Risk bands on the absolute risk score R = TS x tier weight. Documented in README.
+risk_bands:
+  Critical: 250
+  High: 100
+  Medium: 30
+  Low: 1
+
+# A03 revenue dependence and A05 scenarios (hours of disruption).
+# affected_tier is used only to compare duration with the assumed RTO.
+scenarios:
+  S1: {name: "PMS and SQL ransomware", duration_hours: 72, revenue_dependence: 0.30, affected_tier: 1,
+       systems: "PMS or SQL"}
+  S2: {name: "Domain controller compromise", duration_hours: 48, revenue_dependence: 0.20, affected_tier: 1,
+       systems: "Active Directory"}
+  S3: {name: "Interface server failure", duration_hours: 24, revenue_dependence: 0.25, affected_tier: 1,
+       systems: "Interface server"}
+  S4: {name: "In room entertainment outage", duration_hours: 24, revenue_dependence: 0.05, affected_tier: 3,
+       systems: "In room entertainment"}
+
+# Sensitivity settings
+sensitivity:
+  severity_weight_pct: 0.20
+  adr_pct: 0.20
+  occupancy_range: [0.55, 0.65, 0.75]
+  top_n: 5

@@ -1,0 +1,61 @@
+analysis,case,spearman_rho,top5_overlap,top5_set_stable,top5_order_stable,rank1_system,scenario,adr_factor,occupancy,group_cost_inr
+severity_weights,Critical weight minus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,Critical weight plus 20%,0.9993,4,False,False,PROP-C-SQL-01,,,,
+severity_weights,High weight minus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,High weight plus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,Medium weight minus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,Medium weight plus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,Low weight minus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,Low weight plus 20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,Critical +20% and others -20%,0.9912,4,False,False,PROP-C-SQL-01,,,,
+severity_weights,Critical -20% and others +20%,1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,All weights minus 20% (control),1.0,5,True,True,PROP-C-SQL-01,,,,
+severity_weights,All weights plus 20% (control),1.0,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Every system one tier more critical,0.9963,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Every system one tier less critical,0.9971,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,All tier weights minus 1,0.9971,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,All tier weights plus 1,1.0,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 1 weight minus 1,1.0,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 1 weight plus 1,1.0,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 2 weight minus 1,0.9971,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 2 weight plus 1,0.9971,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 3 weight minus 1,0.9971,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 3 weight plus 1,0.9971,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 4 weight minus 1,1.0,5,True,True,PROP-C-SQL-01,,,,
+tier_weights,Tier 4 weight plus 1,1.0,5,True,True,PROP-C-SQL-01,,,,
+downtime_cost,"ADR x0.8, occupancy 55%",,,,,,S1,0.8,0.55,1352241
+downtime_cost,"ADR x0.8, occupancy 55%",,,,,,S2,0.8,0.55,600996
+downtime_cost,"ADR x0.8, occupancy 55%",,,,,,S3,0.8,0.55,375623
+downtime_cost,"ADR x0.8, occupancy 55%",,,,,,S4,0.8,0.55,75125
+downtime_cost,"ADR x0.8, occupancy 65%",,,,,,S1,0.8,0.65,1598103
+downtime_cost,"ADR x0.8, occupancy 65%",,,,,,S2,0.8,0.65,710268
+downtime_cost,"ADR x0.8, occupancy 65%",,,,,,S3,0.8,0.65,443917
+downtime_cost,"ADR x0.8, occupancy 65%",,,,,,S4,0.8,0.65,88783
+downtime_cost,"ADR x0.8, occupancy 75%",,,,,,S1,0.8,0.75,1843965
+downtime_cost,"ADR x0.8, occupancy 75%",,,,,,S2,0.8,0.75,819540
+downtime_cost,"ADR x0.8, occupancy 75%",,,,,,S3,0.8,0.75,512213
+downtime_cost,"ADR x0.8, occupancy 75%",,,,,,S4,0.8,0.75,102443
+downtime_cost,"ADR x1.0, occupancy 55%",,,,,,S1,1.0,0.55,1690304
+downtime_cost,"ADR x1.0, occupancy 55%",,,,,,S2,1.0,0.55,751245
+downtime_cost,"ADR x1.0, occupancy 55%",,,,,,S3,1.0,0.55,469529
+downtime_cost,"ADR x1.0, occupancy 55%",,,,,,S4,1.0,0.55,93907
+downtime_cost,"ADR x1.0, occupancy 65%",,,,,,S1,1.0,0.65,1997626
+downtime_cost,"ADR x1.0, occupancy 65%",,,,,,S2,1.0,0.65,887835
+downtime_cost,"ADR x1.0, occupancy 65%",,,,,,S3,1.0,0.65,554896
+downtime_cost,"ADR x1.0, occupancy 65%",,,,,,S4,1.0,0.65,110978
+downtime_cost,"ADR x1.0, occupancy 75%",,,,,,S1,1.0,0.75,2304959
+downtime_cost,"ADR x1.0, occupancy 75%",,,,,,S2,1.0,0.75,1024425
+downtime_cost,"ADR x1.0, occupancy 75%",,,,,,S3,1.0,0.75,640267
+downtime_cost,"ADR x1.0, occupancy 75%",,,,,,S4,1.0,0.75,128054
+downtime_cost,"ADR x1.2, occupancy 55%",,,,,,S1,1.2,0.55,2028361
+downtime_cost,"ADR x1.2, occupancy 55%",,,,,,S2,1.2,0.55,901494
+downtime_cost,"ADR x1.2, occupancy 55%",,,,,,S3,1.2,0.55,563433
+downtime_cost,"ADR x1.2, occupancy 55%",,,,,,S4,1.2,0.55,112686
+downtime_cost,"ADR x1.2, occupancy 65%",,,,,,S1,1.2,0.65,2397155
+downtime_cost,"ADR x1.2, occupancy 65%",,,,,,S2,1.2,0.65,1065402
+downtime_cost,"ADR x1.2, occupancy 65%",,,,,,S3,1.2,0.65,665879
+downtime_cost,"ADR x1.2, occupancy 65%",,,,,,S4,1.2,0.65,133178
+downtime_cost,"ADR x1.2, occupancy 75%",,,,,,S1,1.2,0.75,2765947
+downtime_cost,"ADR x1.2, occupancy 75%",,,,,,S2,1.2,0.75,1229310
+downtime_cost,"ADR x1.2, occupancy 75%",,,,,,S3,1.2,0.75,768316
+downtime_cost,"ADR x1.2, occupancy 75%",,,,,,S4,1.2,0.75,153661

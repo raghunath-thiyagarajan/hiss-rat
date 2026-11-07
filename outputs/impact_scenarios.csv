@@ -1,0 +1,29 @@
+property,property_label,size_class,rooms,adr_inr,scenario_id,scenario,duration_hours,revenue_dependence,hourly_loss_base_inr,cost_low_inr,cost_base_inr,cost_high_inr,assumed_rto_hours,hours_beyond_rto,basis
+PROP-A,PROP-A,L,150,5500,S1,PMS and SQL ransomware,72,0.3,9720,592144,699806,807469,4,68,assumed
+PROP-A,PROP-A,L,150,5500,S2,Domain controller compromise,48,0.2,6480,263175,311025,358875,4,44,assumed
+PROP-A,PROP-A,L,150,5500,S3,Interface server failure,24,0.25,8100,164484,194391,224297,4,20,assumed
+PROP-A,PROP-A,L,150,5500,S4,In room entertainment outage,24,0.05,1620,32897,38878,44859,24,0,assumed
+PROP-B,PROP-B,M,100,4500,S1,PMS and SQL ransomware,72,0.3,5302,322988,381712,440438,4,68,assumed
+PROP-B,PROP-B,M,100,4500,S2,Domain controller compromise,48,0.2,3534,143550,169650,195750,4,44,assumed
+PROP-B,PROP-B,M,100,4500,S3,Interface server failure,24,0.25,4418,89719,106031,122344,4,20,assumed
+PROP-B,PROP-B,M,100,4500,S4,In room entertainment outage,24,0.05,884,17944,21206,24469,24,0,assumed
+PROP-C,PROP-C,M,100,4500,S1,PMS and SQL ransomware,72,0.3,5302,322988,381712,440438,4,68,assumed
+PROP-C,PROP-C,M,100,4500,S2,Domain controller compromise,48,0.2,3534,143550,169650,195750,4,44,assumed
+PROP-C,PROP-C,M,100,4500,S3,Interface server failure,24,0.25,4418,89719,106031,122344,4,20,assumed
+PROP-C,PROP-C,M,100,4500,S4,In room entertainment outage,24,0.05,884,17944,21206,24469,24,0,assumed
+PROP-D,PROP-D,S,60,3500,S1,PMS and SQL ransomware,72,0.3,2474,150728,178132,205538,4,68,assumed
+PROP-D,PROP-D,S,60,3500,S2,Domain controller compromise,48,0.2,1649,66990,79170,91350,4,44,assumed
+PROP-D,PROP-D,S,60,3500,S3,Interface server failure,24,0.25,2062,41869,49481,57094,4,20,assumed
+PROP-D,PROP-D,S,60,3500,S4,In room entertainment outage,24,0.05,412,8374,9896,11419,24,0,assumed
+PROP-E,PROP-E,S,60,3500,S1,PMS and SQL ransomware,72,0.3,2474,150728,178132,205538,4,68,assumed
+PROP-E,PROP-E,S,60,3500,S2,Domain controller compromise,48,0.2,1649,66990,79170,91350,4,44,assumed
+PROP-E,PROP-E,S,60,3500,S3,Interface server failure,24,0.25,2062,41869,49481,57094,4,20,assumed
+PROP-E,PROP-E,S,60,3500,S4,In room entertainment outage,24,0.05,412,8374,9896,11419,24,0,assumed
+PROP-F,PROP-F,S,60,3500,S1,PMS and SQL ransomware,72,0.3,2474,150728,178132,205538,4,68,assumed
+PROP-F,PROP-F,S,60,3500,S2,Domain controller compromise,48,0.2,1649,66990,79170,91350,4,44,assumed
+PROP-F,PROP-F,S,60,3500,S3,Interface server failure,24,0.25,2062,41869,49481,57094,4,20,assumed
+PROP-F,PROP-F,S,60,3500,S4,In room entertainment outage,24,0.05,412,8374,9896,11419,24,0,assumed
+GROUP,Group total (6 properties),,530,,S1,PMS and SQL ransomware,72,0.3,27746,1690304,1997626,2304959,4,68,assumed
+GROUP,Group total (6 properties),,530,,S2,Domain controller compromise,48,0.2,18495,751245,887835,1024425,4,44,assumed
+GROUP,Group total (6 properties),,530,,S3,Interface server failure,24,0.25,23122,469529,554896,640267,4,20,assumed
+GROUP,Group total (6 properties),,530,,S4,In room entertainment outage,24,0.05,4624,93907,110978,128054,24,0,assumed

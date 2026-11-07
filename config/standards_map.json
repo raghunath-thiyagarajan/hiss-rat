@@ -1,0 +1,199 @@
+{
+  "_note": "One primary mapping per standard per family. ISO control ids and titles follow the ISO/IEC 27001:2022 Annex A structure. PCI DSS requirement numbers are v4.0.x; items marked 'to be verified' were not confirmed against the standard text. GDPR article numbers were not re-checked against the regulation text.",
+  "families": [
+    {
+      "key": "smb_signing",
+      "label": "SMB signing not required",
+      "patterns": [
+        "^SMB Signing"
+      ],
+      "iso": "A.8.20",
+      "pci": "2.2.1",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(b)",
+      "rationale": "Unsigned SMB sessions allow relay and tampering on the flat hotel LAN, so network and configuration hardening is the control gap.",
+      "iso_title": "Networks security"
+    },
+    {
+      "key": "llmnr",
+      "label": "LLMNR enabled",
+      "patterns": [
+        "LLMNR"
+      ],
+      "iso": "A.8.9",
+      "pci": "2.2.4",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(b)",
+      "rationale": "Link local name resolution is an unneeded default function that enables credential capture, so it belongs in the hardening baseline.",
+      "iso_title": "Configuration management"
+    },
+    {
+      "key": "weak_certificates",
+      "label": "Untrusted, self signed, weak or expired certificates",
+      "patterns": [
+        "^SSL Certificate Cannot Be Trusted",
+        "^SSL Self-Signed Certificate",
+        "^SSL Certificate with Wrong Hostname",
+        "^SSL Certificate Expiry$",
+        "^SSL Certificate Signed Using Weak Hashing Algorithm$",
+        "Certificate Chain Contains RSA Keys"
+      ],
+      "iso": "A.8.24",
+      "pci": "4.2.1",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(a)",
+      "rationale": "Certificates that clients cannot trust defeat the purpose of encryption and train staff to accept warnings; key and certificate management is the gap.",
+      "iso_title": "Use of cryptography"
+    },
+    {
+      "key": "legacy_tls_ssl",
+      "label": "Legacy TLS and SSL (TLS 1.0, TLS 1.1, SSLv2, SSLv3)",
+      "patterns": [
+        "^TLS Version 1\\.0 Protocol Detection",
+        "^TLS Version 1\\.1 Deprecated",
+        "^SSL Version 2 and 3",
+        "POODLE"
+      ],
+      "iso": "A.8.24",
+      "pci": "4.2.1",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(a)",
+      "rationale": "Deprecated protocol versions weaken the transport protection of guest and payment related data.",
+      "iso_title": "Use of cryptography"
+    },
+    {
+      "key": "weak_ciphers",
+      "label": "SWEET32, RC4 and weak key exchange ciphers",
+      "patterns": [
+        "SWEET32",
+        "RC4 Cipher",
+        "Diffie-Hellman Modulus",
+        "Medium Strength Cipher"
+      ],
+      "iso": "A.8.24",
+      "pci": "4.2.1",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(a)",
+      "rationale": "3DES, RC4 and short Diffie-Hellman groups do not meet current strong cryptography expectations.",
+      "iso_title": "Use of cryptography"
+    },
+    {
+      "key": "remote_access_tools",
+      "label": "Remote access tools (remote control agents, VNC, RDP exposure)",
+      "patterns": [
+        "Remote Control Agent",
+        "^VNC Software Detection",
+        "^Remote Desktop Protocol Service Detection"
+      ],
+      "iso": "A.8.20",
+      "pci": "8.4.3",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(b)",
+      "rationale": "Several overlapping remote tools widen the attack surface; remote access needs one controlled, authenticated and logged path.",
+      "iso_title": "Networks security"
+    },
+    {
+      "key": "rdp_no_nla",
+      "label": "RDP without Network Level Authentication",
+      "patterns": [
+        "Network Level Authentication"
+      ],
+      "iso": "A.8.5",
+      "pci": "8.3.1",
+      "pci_status": "to be verified",
+      "gdpr": "Art. 32(1)(b)",
+      "rationale": "Without NLA a session is offered before the user authenticates, which weakens secure logon and invites brute force.",
+      "iso_title": "Secure authentication"
+    },
+    {
+      "key": "msmq_missing_patches",
+      "label": "MSMQ QueueJumper and missing patches",
+      "patterns": [
+        "Message Queuing RCE",
+        "QueueJumper"
+      ],
+      "iso": "A.8.8",
+      "pci": "6.3.3",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(b)",
+      "rationale": "A critical remote code execution flaw with a vendor fix shows patches are not applied within a defined time.",
+      "iso_title": "Management of technical vulnerabilities"
+    },
+    {
+      "key": "unsupported_outdated_software",
+      "label": "Unsupported or outdated software",
+      "patterns": [
+        "Unsupported Version",
+        "Extended Support",
+        "^Apache",
+        "^OpenSSL 1\\.0",
+        "^OpenSSH <",
+        "^JQuery",
+        "^HP System Management Homepage"
+      ],
+      "iso": "A.8.19",
+      "pci": "12.3.4",
+      "pci_status": "verified",
+      "gdpr": "Art. 5(1)(f)",
+      "rationale": "Software past vendor support or far behind current versions has no reliable security fixes, so lifecycle tracking is the gap.",
+      "iso_title": "Installation of software on operational systems"
+    },
+    {
+      "key": "cleartext_protocols",
+      "label": "Cleartext and insecure legacy protocols (FTP, SMTP, POP, IMAP, TFTP, NFS, rsync, SMBv1)",
+      "patterns": [
+        "^FTP Server Detection",
+        "^SMTP Server Detection",
+        "^POP Server Detection",
+        "^IMAP Service",
+        "^TFTP",
+        "^NFS Server",
+        "^rsync",
+        "Server Message Block \\(SMB\\) Protocol Version 1"
+      ],
+      "iso": "A.5.14",
+      "pci": "2.2.5",
+      "pci_status": "verified",
+      "gdpr": "Art. 5(1)(f)",
+      "rationale": "Guest and business data moved over cleartext or legacy services can be read or altered in transit; secure transfer rules are missing.",
+      "iso_title": "Information transfer"
+    },
+    {
+      "key": "legacy_simple_services",
+      "label": "Legacy simple services and unneeded network responses",
+      "patterns": [
+        "^Echo Service",
+        "^Chargen",
+        "^Quote of the Day",
+        "^Finger",
+        "^Daytime",
+        "^Discard",
+        "^ICMP Timestamp",
+        "^HTTP TRACE"
+      ],
+      "iso": "A.8.9",
+      "pci": "2.2.4",
+      "pci_status": "verified",
+      "gdpr": "Art. 25",
+      "rationale": "Echo, chargen, QOTD and finger have no business use on a hotel server; secure by default configuration removes them.",
+      "iso_title": "Configuration management"
+    },
+    {
+      "key": "ssh_weakness",
+      "label": "SSH weakness (weak ciphers, MACs, Terrapin, password logon)",
+      "patterns": [
+        "Terrapin",
+        "^SSH Password Authentication",
+        "^SSH SHA-1 HMAC",
+        "^SSH Weak",
+        "^SSH Server CBC"
+      ],
+      "iso": "A.8.24",
+      "pci": "2.2.7",
+      "pci_status": "verified",
+      "gdpr": "Art. 32(1)(a)",
+      "rationale": "Weak SSH algorithms and password logon on an administrative channel fall short of strong cryptography for remote administration.",
+      "iso_title": "Use of cryptography"
+    }
+  ]
+}

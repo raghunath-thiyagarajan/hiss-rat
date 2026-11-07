@@ -1,0 +1,11 @@
+role_group,systems,critical,high,medium,low,info,technical_score,total_risk_score,mean_system_index
+SQL and SQL backup,3,8,10,12,6,19,182,910,66.7
+PMS,2,2,3,5,1,9,54,270,29.7
+AD,3,0,4,9,2,11,53,265,19.4
+Interface server,1,1,1,2,1,4,23,115,25.3
+Accounting package,1,0,1,2,0,3,12,36,7.9
+Guest services system,1,0,0,3,1,3,10,30,6.6
+In room entertainment,1,0,0,3,2,3,11,22,4.8
+Front desk and front office,1,0,0,2,1,3,7,21,4.6
+Finance and accounts,1,0,0,1,0,2,3,9,2.0
+Other desktops and managers,2,0,0,0,1,8,1,1,0.1

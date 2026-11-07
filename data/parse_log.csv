@@ -1,0 +1,20 @@
+file_ref,format,property,role,decision,reason,sha256_12
+F04,summary,PROP-A,pms,dropped,byte identical to F03,239e80984bb6
+F01,summary,PROP-A,ad,kept,representative of 1 distinct export(s),d5175c292984
+F02,summary,PROP-A,frontdesk 2,kept,representative of 1 distinct export(s),9c25be0e23d9
+F03,summary,PROP-A,pms,kept,representative of 1 distinct export(s),239e80984bb6
+F05,summary,PROP-A,sql,kept,representative of 1 distinct export(s),bb3b783d8675
+F06,plugin_detail,PROP-B,accounting,dropped,alternative export of the same system (same property and role); kept F07,7ed078f0b52f
+F07,summary,PROP-B,accounting,kept,representative of 2 distinct export(s),aa2b1acd6cff
+F08,summary,PROP-B,interface,kept,representative of 1 distinct export(s),94fd06d20d7b
+F09,summary,PROP-C,ad,kept,representative of 1 distinct export(s),2b1d1d7be534
+F10,summary,PROP-C,guestsvc,kept,representative of 1 distinct export(s),eef4313da9dc
+F13,host_detail,PROP-C,sqlbackup,dropped,alternative export of the same system (same property and role); kept F11,29fb2de788a5
+F11,summary,PROP-C,sqlbackup,kept,representative of 2 distinct export(s),24d1e9c9f8c0
+F12,summary,PROP-C,sql,kept,representative of 1 distinct export(s),fe8ac7e02dd1
+F14,summary,PROP-D,inroom,kept,representative of 1 distinct export(s),3fa76e502abc
+F15,summary,PROP-D,pms,kept,representative of 1 distinct export(s),854a29d7225e
+F16,summary,PROP-E,ad,kept,representative of 1 distinct export(s),a8d0a79e432c
+F17,summary,PROP-E,desktop,kept,representative of 1 distinct export(s),63f5cbdeb4af
+F18,summary,PROP-F,accounts,kept,representative of 1 distinct export(s),2bc28323b0dc
+F19,summary,PROP-F,backoffice,kept,representative of 1 distinct export(s),66e346202c7d

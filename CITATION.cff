@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "HISS-RAT: Hotel Information Security Risk Assessment Toolkit"
+type: software
+authors:
+  - family-names: "Thiyagarajan"
+    given-names: "Raghunath"
+    affiliation: "REVA University"
+repository-code: "https://github.com/raghunath-thiyagarajan/hiss-rat"
+license: MIT
+abstract: "A Python standard library toolkit that parses Nessus HTML exports, scores systems by finding severity and role criticality, estimates downtime impact with an explicit assumption model, maps finding families to ISO/IEC 27001:2022, PCI DSS and GDPR and tests ranking stability. The repository holds synthetic sample data only."
+keywords:
+  - cyber security
+  - risk assessment
+  - vulnerability scanning
+  - hospitality

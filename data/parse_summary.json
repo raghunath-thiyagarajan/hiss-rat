@@ -1,0 +1,96 @@
+{
+  "html_files_read": 19,
+  "byte_identical_files_dropped": 1,
+  "alternative_exports_dropped": 2,
+  "distinct_systems": 16,
+  "severity_totals": {
+    "Critical": 11,
+    "High": 19,
+    "Medium": 39,
+    "Low": 15,
+    "Info": 65
+  },
+  "low_or_above": 84,
+  "files_by_format": {
+    "summary": 17,
+    "host_detail": 1,
+    "plugin_detail": 1,
+    "unknown": 0
+  },
+  "unresolved_property_or_role": 0,
+  "internal_checks": [
+    {
+      "file_ref": "F01",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F02",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F03",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F05",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F07",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F08",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F09",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F10",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F11",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F13",
+      "detail_summary_level_matches_summary": true
+    },
+    {
+      "file_ref": "F12",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F14",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F15",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F16",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F17",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F18",
+      "tiles_match_rows": true
+    },
+    {
+      "file_ref": "F19",
+      "tiles_match_rows": true
+    }
+  ],
+  "parsing_assumptions": [
+    "Property and role come from file and folder names only.",
+    "A file whose name hides its role inherits property and role from a file with the same host fingerprint (fingerprint is held in memory only).",
+    "Detailed host exports are counted at summary level: one row per distinct plugin id."
+  ]
+}

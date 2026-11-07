@@ -1,0 +1,5 @@
+scenario_id,scenario,check_in_delay,billing_errors,key_card_failure,payment_failure,privacy_exposure,note,basis
+S1,PMS and SQL ransomware,High,High,Medium,Medium,High,Manual registration and folios; new key cards depend on the PMS while existing keys keep working; standalone card terminals still work; ID scans and Form C records are exposed if data is stolen.,assumed
+S2,Domain controller compromise,Medium,Medium,Low,Low,High,Logon failures slow front desk and POS use; stolen directory credentials open file shares and the PMS database.,assumed
+S3,Interface server failure,Low,High,High,Medium,Low,POS charges stop posting to room folios and the key encoder link breaks; guests are affected at check in and check out.,assumed
+S4,In room entertainment outage,None,None,None,None,Low,"In room entertainment, casting and service requests fail; compensation and complaints rise; cleartext FTP and SMTP content is a minor leakage path.",assumed
